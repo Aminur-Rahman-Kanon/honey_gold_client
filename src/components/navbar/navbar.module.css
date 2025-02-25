@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(45, 45, 45);
+}
+
+@media (max-width: 767px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .link {
+        font-size: 1.5rem;
+    };
+}
