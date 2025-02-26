@@ -3,13 +3,12 @@ import styles from './sidedrawer.module.css';
 import { connect } from 'react-redux';
 import { actions } from '../../redux/actions';
 import Logo from '../logo/logo';
-import Navbar from '../navbar/navbar';
 import SocialLinkContainer from '../socialLinkContainer/socialLinkContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Categories from '../navbar/categories/categories';
 
-const Sidedrawer = ({ sidedrawer, nestedNavDisplay, toggleSidedrawer }) => {
+const Sidedrawer = ({ sidedrawer, nestedNavDisplay, toggleSidedrawer, toggleNestedNav }) => {
     console.log(nestedNavDisplay)
     return (
         <div className={ sidedrawer ? `${styles.container} ${styles.open}` : styles.container}>
@@ -26,7 +25,20 @@ const Sidedrawer = ({ sidedrawer, nestedNavDisplay, toggleSidedrawer }) => {
                     <Categories />
                 </div>
                 <div className={styles.navbar}>
-                    <Navbar />
+                    <ul className={styles.navLists}>
+                        <li className={styles.navList}>
+                            <a href='/' className={styles.navLink}>home</a>
+                        </li>
+                        <li className={styles.navList}>
+                            <div className={styles.navLink} onClick={toggleNestedNav}>shop</div>
+                        </li>
+                        <li className={styles.navList}>
+                            <a href='/' className={styles.navLink}>contact</a>
+                        </li>
+                        <li className={styles.navList}>
+                            <a href='/' className={styles.navLink}>about</a>
+                        </li>
+                    </ul>
                 </div>
                 <div className={styles.link}>
                     <SocialLinkContainer />
@@ -46,6 +58,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         toggleSidedrawer: () => dispatch({ type: actions.TOGGLE_SIDEDRAWER }),
+        toggleNestedNav: () => dispatch({ type: actions.TOGGLE_NESTED_NAV_DISPLAY })
     }
 }
 
