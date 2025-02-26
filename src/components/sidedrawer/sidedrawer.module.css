@@ -10,7 +10,7 @@
     transition: all 0.5s ease;
     transform: translateX(-100%);
     background-color: white;
-    z-index: 900;
+    z-index: 700;
 }
 
 .container.open {
@@ -68,9 +68,9 @@
     top: 0;
     left: 0;
     transform: translateX(-150%);
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; */
     transition: all 0.7s ease;
     background-color: white;
     z-index: 800;
