@@ -20,12 +20,16 @@
 }
 
 .drawtoggle {
+    width: 50px;
     display: none;
     justify-content: center;
     align-items: center;
 }
 
 @media (max-width: 767px) {
+    .topbar {
+        padding: 10px;
+    }
     .left, .right {
         display: none;
     }
