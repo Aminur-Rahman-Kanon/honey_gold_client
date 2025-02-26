@@ -1,0 +1,34 @@
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayProduct {
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        margin: 25px auto;
+        gap: 20px;
+    }
+}

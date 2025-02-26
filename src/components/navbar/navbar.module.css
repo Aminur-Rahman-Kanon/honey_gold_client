@@ -23,6 +23,21 @@
     align-items: center;
 }
 
+.child {
+    position: absolute;
+    top: 60px;
+    left: 2.5%;
+    right: 2.5%;
+    width: 95%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItem:hover .child {
+    display: flex;
+}
+
 .link {
     text-decoration: none;
     font-size: 1rem;
@@ -38,4 +53,12 @@
     .link {
         font-size: 1.5rem;
     };
+
+    .child {
+        display: none;
+    }
+
+    .navItem:hover .child {
+        display: none;
+    }
 }

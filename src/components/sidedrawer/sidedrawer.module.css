@@ -4,14 +4,13 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease;
     transform: translateX(-100%);
     background-color: white;
+    z-index: 700;
 }
 
 .container.open {
@@ -29,8 +28,17 @@
     gap: 50px;
 }
 
+.logoContainer {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
-    width: 300px;
+    width: 200px;
 }
 
 .navbar {
@@ -40,13 +48,33 @@
 }
 
 .xBtnContainer {
-    position: absolute;
-    top: 2%;
-    right: 2%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .xBtn {
     font-size: 1.5rem;
     color: rgb(45, 45, 45);
+}
+
+.nestedItem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-150%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 0.7s ease;
+    background-color: white;
+    z-index: 800;
+}
+
+.nestedItem.slide {
+    transform: translateX(0);
 }
 

@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: capitalize;
+    color: gray;
+    cursor: pointer;
+    background-color: white;
+    transition: color 0.7s ease;
+}
+
+.btn.active {
+    color: black;
+}
+
+.btn:hover {
+    color: black;
+}
+
+.select {
+    width: 100%;
+    height: 30px;
+    border: 1px solid gray;
+    outline: none;
+    padding-left: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(45, 45, 45);
+    text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+    
+}
