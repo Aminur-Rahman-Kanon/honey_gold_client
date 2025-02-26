@@ -10,6 +10,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Categories from '../navbar/categories/categories';
 
 const Sidedrawer = ({ sidedrawer, nestedNavDisplay, toggleSidedrawer }) => {
+    console.log(nestedNavDisplay)
     return (
         <div className={ sidedrawer ? `${styles.container} ${styles.open}` : styles.container}>
             <div className={styles.wrapper}>
