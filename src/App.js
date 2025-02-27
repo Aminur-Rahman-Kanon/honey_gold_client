@@ -5,23 +5,26 @@ import Topbar from './components/topbar/topbar';
 import Sidedrawer from './components/sidedrawer/sidedrawer';
 import Homepage from './pages/homepage/homepage';
 import Footer from './components/footer/footer';
+import DisplayProduct from './pages/displayProduct/displayProduct';
 import { connect } from 'react-redux';
 import { actions } from './redux/actions';
+import { getCartItems } from './utilities/utilities';
+import { ToastContainer } from 'react-toastify';
 
 function App({ products, storeProducts }) {
 
     useEffect(() => {
-      fetch('https://honey-gold-server.onrender.com/fetch-products').then(res => res.json()).then(result => storeProducts(result.data))
+      fetch('https://honey-gold-server.onrender.com/fetch-products').then(res => res.json()).then(result => storeProducts(result.data));
     }, []);
-
-    console.log(products)
 
     return (
       <div className="App">
+        <ToastContainer />
         <Sidedrawer />
         <Topbar />
         <Routes>
           <Route path='/' element={<Homepage />} />
+          <Route path='/product/:productId' element={<DisplayProduct />} />
         </Routes>
         <Footer />
       </div>

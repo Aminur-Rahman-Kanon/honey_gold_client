@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className={styles.container}>
             <ul className={styles.nav}>
                 <li className={styles.navItem}>
-                    <a href='#' className={styles.link}>Home</a>
+                    <a href='/' className={styles.link}>Home</a>
                 </li>
                 <li className={styles.navItem}>
                     <div className={styles.link}>Shop</div>

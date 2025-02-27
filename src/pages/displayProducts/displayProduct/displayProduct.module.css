@@ -27,6 +27,7 @@
 }
 
 .imgContainer {
+    text-decoration: none;
     position: relative;
     width: 100%;
     height: calc(100% - 80px);
@@ -122,5 +123,9 @@
 
     .imgContainer {
         padding: 10px;
+    }
+
+    .slider {
+        width: 80%;
     }
 }

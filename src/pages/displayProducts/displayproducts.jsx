@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './displayProducts.module.css';
-import DisplayProduct from '../../components/displayProduct/displayProduct';
+import DisplayProduct from './displayProduct/displayProduct';
 import DisplayProductPanel from './displayProductPanel/displayProductPanel';
 
 const DisplayProducts = () => {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './displayProduct.module.css';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const DisplayProduct = ({ products, category }) => {
 
@@ -23,17 +24,15 @@ const DisplayProduct = ({ products, category }) => {
         }
     }, [products, category])
 
-    console.log(category)
-
     const displayItem = item.length ? <div className={styles.container}>
         {
             item.slice(0, 6).map(p => <div key={p._id} className={styles.wrapper}>
-                <div className={styles.imgContainer}>
+                <Link to={`/product/${p.title}`} className={styles.imgContainer}>
                     <img src={p.img[0].img} alt={p.title} className={styles.img} />
                     <div className={styles.slider}>
                         <span className={styles.textSmall}>quick look</span>
                     </div>
-                </div>
+                </Link>
                 <div className={styles.footer}>
                     <h3 className={styles.headingSmallBlack}>{p.title}</h3>
                     <div className={styles.flexGroup}>

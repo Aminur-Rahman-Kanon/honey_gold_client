@@ -9,6 +9,9 @@ const Topbar = () => {
     return (
         <div className={styles.container}>
             <div className={styles.topbar}>
+                <div className={styles.drawtoggle}>
+                    <Drawtoggle />
+                </div>
                 <div className={styles.middle}>
                     <Logo />
                 </div>
@@ -17,9 +20,6 @@ const Topbar = () => {
                 </div>
                 <div className={styles.right}>
                     <RightPanel />
-                </div>
-                <div className={styles.drawtoggle}>
-                    <Drawtoggle />
                 </div>
             </div>
         </div>

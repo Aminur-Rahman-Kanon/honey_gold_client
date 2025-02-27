@@ -30,7 +30,13 @@
     .topbar {
         padding: 10px;
     }
-    .left, .right {
+
+    .middle {
+        display: none;
+    }
+
+
+    .left {
         display: none;
     }
 
